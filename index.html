@@ -24,13 +24,54 @@
                 </div>
             </div>
             <div class="icons">
-              <img src="/images/icons-removebg-preview.png" alt="">
+                <img src="/images/icons-removebg-preview.png" alt="">
             </div>
         </div>
         <div class="right flex">
-
+            <form id="uploadForm">
+            <div class="flex col" id="box">
+                <p>Upload File</p>
+                <div class="flex col" id="cloud">
+                    <div class="text" style="text-align: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#47505a" width="28"
+                            height="28">
+                            <path
+                                d="M492 236H276V20c0-11.046-8.954-20-20-20s-20 8.954-20 20v216H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h216v216c0 11.046 8.954 20 20 20s20-8.954 20-20V276h216c11.046 0 20-8.954 20-20s-8.954-20-20-20z">
+                            </path>
+                        </svg>
+                        <br><br>
+                        <p>Drag &amp; Drop
+                        </p>
+                        <p>
+                            "or"
+                            <span>Browse</span>
+                        </p>
+                    </div>
+                 
+                        <input class="invisible" type="file" name="file" id="fileInput" accept=".xlsx" required>
+                    </div>
+                </form>
+                <div class="below flex">
+                    <div id="progressContainer" class="flex">
+                        <div id="name" class="basis"></div>
+                        <div class="bar basis">
+                            <div id="progressBar"></div>
+                        </div>
+                        <div id="progressLabel"></div>
+                    </div>
+                    <div id="downloadContainer" class="flex">
+                        <a id="downloadLink" href="#" download="converted.csv">
+                        <div class="button flex">
+                            <button id="downloadButton">Download</button>   
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script src="index.js"></script>
 </body>
 
